@@ -66,7 +66,10 @@
 
 <script>
 export default {
-  name: "Record"
+  name: "Record",
+  mounted() {
+
+  }
 }
 </script>
 
