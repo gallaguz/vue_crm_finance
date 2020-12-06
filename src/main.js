@@ -10,7 +10,7 @@ import dateFilter from "@/filters/date.filter";
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
 
-import firebase from "firebase";
+import firebase from "firebase/app";
 import 'firebase/auth'
 import 'firebase/database'
 
@@ -21,16 +21,19 @@ Vue.use(Vuelidate);
 
 Vue.filter('date', dateFilter);
 
-
-firebase.initializeApp({
+const firebaseConfig = {
   apiKey: "AIzaSyC5npQ3xusrlLv9WttrisHDLDFjnNypAmk",
   authDomain: "vue-crm-finance-2adb1.firebaseapp.com",
+  databaseURL: "https://vue-crm-finance-2adb1-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "vue-crm-finance-2adb1",
   storageBucket: "vue-crm-finance-2adb1.appspot.com",
   messagingSenderId: "603473693192",
   appId: "1:603473693192:web:91c30e2ea4d0bd3b5adfbd",
   measurementId: "G-4F5DT5W2HH"
-});
+};
+firebase.initializeApp(firebaseConfig);
+
+
 
 let app;
 
