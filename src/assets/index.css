@@ -142,7 +142,7 @@
 }
 
 .bill-card {
-    height: 310px
+    min-height: 310px
 }
 
 .pointer {
