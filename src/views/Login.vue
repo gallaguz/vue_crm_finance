@@ -83,7 +83,6 @@ export default {
     password: ''
   }),
   validations: {
-
     email: {
       email,
       required
