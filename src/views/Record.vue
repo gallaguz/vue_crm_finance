@@ -13,6 +13,7 @@
       Категорий пока нет.
       <router-link to="/categories">Добавить категорию</router-link>
     </p>
+
     <form
       v-else
       class="form"
