@@ -44,8 +44,8 @@ export default {
       return {
         ...record,
         categoryName: this.categories.find(c => c.id === record.categoryId).title,
-        typeClass: record === 'income' ? 'green' : 'red',
-        typeText: record === 'income' ? 'Доход' : 'Расход'
+        typeClass: record.type === 'income' ? 'green' : 'red',
+        typeText: record.type === 'income' ? 'Доход' : 'Расход'
       }
     });
 
