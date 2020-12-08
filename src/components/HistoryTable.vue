@@ -12,16 +12,28 @@
     </thead>
 
     <tbody>
-    <tr>
-      <td>1</td>
-      <td>1212</td>
-      <td>12.12.32</td>
-      <td>name</td>
+    <tr
+      v-for="(record, idx) in records"
+      :key="record.id"
+    >
+      <td>{{ idx +1 }}</td>
+      <td>{{ record.amount | currency('RUB') }}</td>
+      <td>{{ record.date | date('datetime') }}</td>
+      <td>{{ record.categoryName }}</td>
       <td>
-        <span class="white-text badge red">Расход</span>
+        <span
+          :class="[record.typeClass]"
+          class="white-text badge"
+        >
+          {{ record.typeText}}
+        </span>
       </td>
       <td>
-        <button class="btn-small btn">
+        <button
+          v-tooltip="'Посмотреть запись'"
+          @click="$router.push('/detail/' + record.id)"
+          class="btn-small btn"
+        >
           <i class="material-icons">open_in_new</i>
         </button>
       </td>
@@ -32,7 +44,13 @@
 
 <script>
 export default {
-  name: "HistoryTable"
+  name: "HistoryTable",
+  props: {
+    records: {
+      required: true,
+      type: Array
+    }
+  }
 }
 </script>
 

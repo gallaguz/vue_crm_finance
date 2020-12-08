@@ -11,8 +11,8 @@ import currencyFilter from "@/filters/currency.filter";
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
 import firebase from "firebase/app";
-import 'firebase/auth'
-import 'firebase/database'
+import 'firebase/auth';
+import 'firebase/database';
 
 Vue.config.productionTip = false
 Vue.use(messagePlugin);
