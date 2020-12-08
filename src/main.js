@@ -13,11 +13,13 @@ import 'materialize-css/dist/js/materialize.min'
 import firebase from "firebase/app";
 import 'firebase/auth';
 import 'firebase/database';
+import Paginate from 'vuejs-paginate';
 
 Vue.config.productionTip = false
 Vue.use(messagePlugin);
 Vue.use(Vuelidate);
 Vue.component('Loader', Loader);
+Vue.component('Paginate', Paginate);
 Vue.directive('tooltip', tooltipDirective);
 Vue.filter('date', dateFilter);
 Vue.filter('currency', currencyFilter);
